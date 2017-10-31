@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<body>
+<style>
+tree { display: block; }
+tree .value { display: block; text-align: center; }
+tree .leaf { display: inline-block; width: 50%; }
+</style>
+
+<h2>Params</h2>
+<form>
+  Depth:
+  <input type="number" name="depth" placeholder="depth" value="9" max="11">
+  <br>
+  <button>Apply</button>
+</form>
+
+<h2>Baseline tree benchmark</h2>
+<p>
+<button id="destroyDom">destroyDom</button>
+<button id="createDom">createDom</button>
+</p>
+
+<div>
+<baseline></baseline>
+</div>
+
+<script src="tree.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

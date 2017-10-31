@@ -1,0 +1,17 @@
+{
+  "name": "purely-fast-benchpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "test": "protractor protractor.conf.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/benchpress": "^0.1.0",
+    "http-server": "^0.10.0",
+    "minimist": "^1.2.0",
+    "protractor": "^4.0.0"
+  }
+}
