@@ -5,7 +5,7 @@ var runner = new benchpress.Runner([
   //use RegressionSlopeValidator to validate samples
   {provide: benchpress.Validator, useExisting: benchpress.RegressionSlopeValidator},
   //use 10 samples to calculate slope regression
-  {provide: benchpress.RegressionSlopeValidator.SAMPLE_SIZE, useValue: 10},
+  {provide: benchpress.RegressionSlopeValidator.SAMPLE_SIZE, useValue: 20},
   //use the script metric to calculate slope regression
   {provide: benchpress.RegressionSlopeValidator.METRIC, useValue: 'scriptTime'},
   {provide: benchpress.Options.FORCE_GC, useValue: true}
@@ -19,9 +19,8 @@ describe('test input', () => {
     runner.sample({
       id: 'deep-tree',
       execute: function() {
-        const str = 'AngularConnect';
-        $('input:first-of-type').sendKeys(str);
-        $('input:first-of-type').clear();
+        $('.fa:first-of-type').click();
+        $('input:first-of-type').sendKeys(protractor.Key.ENTER);
       }
     }).then(done, done.fail);
   });
